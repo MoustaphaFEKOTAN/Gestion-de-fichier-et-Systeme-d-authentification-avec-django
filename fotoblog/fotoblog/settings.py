@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+
+AUTH_USER_MODEL = 'authentication.User' # Indiquer à Django d'utiliser le modèle User personnalisé
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
