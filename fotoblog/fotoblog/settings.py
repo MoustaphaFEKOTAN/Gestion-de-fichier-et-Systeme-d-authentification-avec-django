@@ -84,6 +84,29 @@ DATABASES = {
     }
 }
 
+#Supossaons que l'on veut utiliser une base de données PostgreSQL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'your_db_name',
+#         'USER': 'your_db_user',
+#         'PASSWORD': 'your_db_password',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+#Et maintenant une base de données MySQL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'your_db_name',
+#         'USER': 'your_db_user',
+#         'PASSWORD': 'your_db_password',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
