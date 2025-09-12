@@ -150,4 +150,3 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Ajouter cette ligne pour rediriger les utilisateurs non authentifiés vers la page de connexion
 LOGIN_URL = 'login'
-
