@@ -1,7 +1,8 @@
 # authentication/models.py
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-
+from django.conf import settings
+from blog.models import Blog
 class User(AbstractUser):
 
     CREATOR = 'creator'
@@ -31,3 +32,5 @@ class User(AbstractUser):
 # il n’y a aucune différence entre les deux acteurs de la relation, comme quand on lie deux amis.
 # Un utilisateur en suit un autre, donc vous précisez  symmetrical=False  .
 # L’argument  symmetrical  n’est pas  requis si vous liez à un autre modèle que celui dans lequel le  ManyToManyField  est déclaré.
+
+
