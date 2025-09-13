@@ -3,8 +3,10 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from . import models
 from . import forms
+from fotoblog.decorators import creator_required 
 # Create your views here.
 @login_required
+@creator_required
 def home(request):
     photos = models.Photo.objects.all()
     return render(request, 'blog/home.html', context={'photos': photos})
