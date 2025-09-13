@@ -26,3 +26,17 @@ def photo_upload(request):
             photo.save()
             return redirect('home')
     return render(request, 'blog/photo_upload.html', context={'form': form})
+
+def blog_and_photo_upload(request):
+    ...
+    if request.method == 'POST':
+        blog_form = forms.BlogForm(request.POST)
+        photo_form = forms.PhotoForm(request.POST, request.FILES)
+        if all([blog_form.is_valid(), photo_form.is_valid()]):
+            photo = photo_form.save(commit=False)
+            photo.uploader = request.user
+            photo.save()
+            blog = blog_form.save(commit=False)
+            blog.photo = photo
+            blog.author = request.user
+            blog.save()
